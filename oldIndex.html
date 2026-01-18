@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Car Marketplace - Premium Desktop Edition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#87CEEB",
+                        "background-dark": "#1f2937",
+                        "surface-dark": "#2d3748",
+                        "accent-dark": "#374151",
+                        "off-white": "#F8F9FA"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .glass-effect { 
+            backdrop-filter: blur(12px); 
+            background-color: rgba(31, 41, 55, 0.8); 
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-off-white antialiased">
+<header class="sticky top-0 z-50 glass-effect border-b border-gray-700">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-900 text-[24px]">directions_car</span>
+</div>
+<h2 class="text-off-white text-2xl font-black tracking-tight">CarMarket</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-primary font-bold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-gray-400 font-medium hover:text-off-white transition-colors" href="#">Browse</a>
+<a class="text-gray-400 font-medium hover:text-off-white transition-colors" href="#">Sell</a>
+<a class="text-gray-400 font-medium hover:text-off-white transition-colors" href="#">About</a>
+<a class="text-gray-400 font-medium hover:text-off-white transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">search</span>
+<input class="bg-accent-dark border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Quick search..." type="text"/>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-accent-dark text-off-white hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-accent-dark text-off-white hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 space-y-24 py-12">
+<section class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Premium Marketplace</span>
+<h1 class="text-6xl font-black leading-[1.1] tracking-tight text-off-white">Find Your Next <br/><span class="text-primary">Masterpiece</span></h1>
+<p class="text-gray-400 text-lg max-w-lg leading-relaxed">Experience the ultimate luxury of choice with our curated selection of high-performance vehicles and electric innovations.</p>
+</div>
+<div class="bg-surface-dark p-6 rounded-2xl shadow-xl border border-gray-700 max-w-xl">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Make/Model</label>
+<select class="bg-accent-dark border-none rounded-lg w-full text-sm text-off-white focus:ring-primary">
+<option>All Brands</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Body Type</label>
+<select class="bg-accent-dark border-none rounded-lg w-full text-sm text-off-white focus:ring-primary">
+<option>Any Type</option>
+</select>
+</div>
+<div class="space-y-1 col-span-2 md:col-span-1">
+<label class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Price Range</label>
+<select class="bg-accent-dark border-none rounded-lg w-full text-sm text-off-white focus:ring-primary">
+<option>Any Price</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-gray-900 font-black py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">search</span>
+                    SEARCH INVENTORY
+                </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-3xl"></div>
+<img alt="Hero Car" class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/3]" data-alt="Modern sleek electric vehicle in a studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7A9h3zI6Qx06wsIsONWO7exjWOtluO9vPgPO4qalc6VzBgsQgf5ypP4yexuiHz4LEWF03h5rgxt1nVRga2IDjW-HPNgrXZtiwdZ3PGuHG1aGGm2VYwIVzw_xoohKDm5IWYYeWQX8ze1LMfKclEh1NxXUucfgYU2nALkoY2TdTJFY_ZkyyTlyFiwbb_r7NhtGGAn7Hjz7jFJbWLk1VJRGtXJtyG6IUgVzCebo5FwUq8921FD7JKbntcquHPcuIfJAMdaTB1KIi8Q"/>
+</div>
+</section>
+<section>
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-black">Browse by Body</h2>
+<p class="text-gray-400 mt-2">Find the shape that fits your lifestyle</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                View All Categories <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<div class="bg-surface-dark border border-gray-700 p-8 rounded-2xl flex flex-col items-center gap-4 hover:border-primary transition-all cursor-pointer group">
+<div class="size-16 rounded-full bg-accent-dark flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-gray-900">electric_car</span>
+</div>
+<span class="font-bold text-off-white">SUV</span>
+</div>
+<div class="bg-surface-dark border border-gray-700 p-8 rounded-2xl flex flex-col items-center gap-4 hover:border-primary transition-all cursor-pointer group">
+<div class="size-16 rounded-full bg-accent-dark flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-gray-900">directions_car</span>
+</div>
+<span class="font-bold text-off-white">Sedan</span>
+</div>
+<div class="bg-surface-dark border border-gray-700 p-8 rounded-2xl flex flex-col items-center gap-4 hover:border-primary transition-all cursor-pointer group">
+<div class="size-16 rounded-full bg-accent-dark flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-gray-900">bolt</span>
+</div>
+<span class="font-bold text-off-white">EV</span>
+</div>
+<div class="bg-surface-dark border border-gray-700 p-8 rounded-2xl flex flex-col items-center gap-4 hover:border-primary transition-all cursor-pointer group">
+<div class="size-16 rounded-full bg-accent-dark flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-gray-900">minor_crash</span>
+</div>
+<span class="font-bold text-off-white">Coupe</span>
+</div>
+<div class="bg-surface-dark border border-gray-700 p-8 rounded-2xl flex flex-col items-center gap-4 hover:border-primary transition-all cursor-pointer group">
+<div class="size-16 rounded-full bg-accent-dark flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-gray-900">airport_shuttle</span>
+</div>
+<span class="font-bold text-off-white">Van</span>
+</div>
+<div class="bg-surface-dark border border-gray-700 p-8 rounded-2xl flex flex-col items-center gap-4 hover:border-primary transition-all cursor-pointer group">
+<div class="size-16 rounded-full bg-accent-dark flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[32px] text-primary group-hover:text-gray-900">fire_truck</span>
+</div>
+<span class="font-bold text-off-white">Pickup</span>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-end justify-between mb-8">
+<h2 class="text-3xl font-black">Latest Arrivals</h2>
+<div class="flex gap-2">
+<button class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-off-white hover:border-off-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-off-white hover:border-off-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-dark rounded-2xl overflow-hidden border border-gray-700 group hover:border-primary transition-all">
+<div class="h-56 relative overflow-hidden">
+<img alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Dark gray metallic sports car profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc__bXTAJ5q9XHb5GL-8o1NxWSOI-2cXhnxYldms4OEDSBQYIXFFB8rKn-hN4dMiLV9M6_zWVSsW3mCTduy5pgi-Zmsbk8-dAE-R4xpy4Hj8IdCFUXJHj9_mRfXZl6QCfaBMcpXJfpKoLjX1zsTQ3LraqQUyLOLDC9fvILAhYRniIUisNZXjuFXWcKzdcLGCBR6bc4Ko4VgZqs12NPJjaXMJVvI_vYELkZChqaIpOl2DChVVh2WFxo4iB6RgL9lZgz4UAEt7AH6Q"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<button class="size-9 bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-off-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary/90 text-gray-900 text-[10px] font-black px-2 py-1 rounded">JUST ARRIVED</span>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div>
+<h4 class="font-bold text-lg text-off-white">Porsche 911 GT3</h4>
+<p class="text-gray-400 text-sm">Automotive Excellence</p>
+</div>
+<div class="flex items-center gap-4 text-xs text-gray-400 border-y border-gray-700 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">speed</span> 1,200 mi</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">settings</span> Auto</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">ev_station</span> Petrol</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-primary text-xl font-black">$182,500</p>
+<button class="text-xs font-bold bg-accent-dark px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">DETAILS</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark rounded-2xl overflow-hidden border border-gray-700 group hover:border-primary transition-all">
+<div class="h-56 relative overflow-hidden">
+<img alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern blue executive luxury sedan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB1ay9TWpjRQNNPpLZP-zuBrf5o1K2ENU96IECOrwyBCstPAsXEi9Bo3hQxZQKI4Ce-39mjr3NMkaTwKpZeQ60SxupdXTeIiaF6z3e7btefiB8rww_23OXuhldiAr-HndeYex8koZuezFk2hj2-6A-qieypOPiqw7gYsOCx7w3132HUJTVystH5ascMErWqWzHN9lmdEhqCCPkitBpDBtlWfwxu4Hr_VAo_yOgZ3MMh5vqKcteyaEDeEK9Nd5UxkaYaSYpnLORFw"/>
+<div class="absolute top-4 right-4">
+<button class="size-9 bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-off-white">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div>
+<h4 class="font-bold text-lg text-off-white">BMW M5 Competition</h4>
+<p class="text-gray-400 text-sm">Executive Performance</p>
+</div>
+<div class="flex items-center gap-4 text-xs text-gray-400 border-y border-gray-700 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">speed</span> 4,500 mi</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">settings</span> Auto</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">ev_station</span> Petrol</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-primary text-xl font-black">$105,900</p>
+<button class="text-xs font-bold bg-accent-dark px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">DETAILS</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark rounded-2xl overflow-hidden border border-gray-700 group hover:border-primary transition-all">
+<div class="h-56 relative overflow-hidden">
+<img alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Yellow performance coupe parked" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBknYyOAinIfUH72IFDg8HIlU8VfbcGEynbMq6gWCRxFBGsVXkQ2j1yKkTuchDab1PBJ7Yqzrtnx9JujD5DufBgCdVXeGrpaR8acbHnvNb8LniFO5QFBZSOel7HmqE_7NWBxNwjSGyiLtvFDcQ4l57qvQ1DjhphzPknE0FZz1Hp1AIPJ5TA4Vk30NpU8CSf4dD7dS_ZQ-rXkbtXdXG9nV8__dhi6IeEIsouaL2AasbpirgfS1tRUFFe7_RDYtOHhXDsOs3OWnYTg"/>
+<div class="absolute top-4 right-4">
+<button class="size-9 bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-off-white">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div>
+<h4 class="font-bold text-lg text-off-white">Audi RS5 Coupe</h4>
+<p class="text-gray-400 text-sm">Sport Styling</p>
+</div>
+<div class="flex items-center gap-4 text-xs text-gray-400 border-y border-gray-700 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">speed</span> 2,100 mi</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">settings</span> Auto</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">ev_station</span> Petrol</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-primary text-xl font-black">$78,400</p>
+<button class="text-xs font-bold bg-accent-dark px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">DETAILS</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark rounded-2xl overflow-hidden border border-gray-700 group hover:border-primary transition-all">
+<div class="h-56 relative overflow-hidden">
+<img alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern sleek electric vehicle in a studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7A9h3zI6Qx06wsIsONWO7exjWOtluO9vPgPO4qalc6VzBgsQgf5ypP4yexuiHz4LEWF03h5rgxt1nVRga2IDjW-HPNgrXZtiwdZ3PGuHG1aGGm2VYwIVzw_xoohKDm5IWYYeWQX8ze1LMfKclEh1NxXUucfgYU2nALkoY2TdTJFY_ZkyyTlyFiwbb_r7NhtGGAn7Hjz7jFJbWLk1VJRGtXJtyG6IUgVzCebo5FwUq8921FD7JKbntcquHPcuIfJAMdaTB1KIi8Q"/>
+<div class="absolute top-4 right-4">
+<button class="size-9 bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-off-white">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div>
+<h4 class="font-bold text-lg text-off-white">Model S Plaid</h4>
+<p class="text-gray-400 text-sm">Electric Speed</p>
+</div>
+<div class="flex items-center gap-4 text-xs text-gray-400 border-y border-gray-700 py-3">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">speed</span> 800 mi</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">settings</span> Auto</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">electric_car</span> EV</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-primary text-xl font-black">$92,000</p>
+<button class="text-xs font-bold bg-accent-dark px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">DETAILS</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-3xl font-black mb-8">Best Deals This Month</h2>
+<div class="grid lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-gradient-to-r from-primary to-blue-400 rounded-3xl p-1 shadow-2xl shadow-primary/10">
+<div class="bg-surface-dark rounded-[calc(1.5rem-4px)] p-8 flex flex-col md:flex-row gap-8 h-full">
+<div class="md:w-1/2 rounded-2xl overflow-hidden">
+<img alt="Featured" class="w-full h-full object-cover" data-alt="Yellow performance coupe parked" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBknYyOAinIfUH72IFDg8HIlU8VfbcGEynbMq6gWCRxFBGsVXkQ2j1yKkTuchDab1PBJ7Yqzrtnx9JujD5DufBgCdVXeGrpaR8acbHnvNb8LniFO5QFBZSOel7HmqE_7NWBxNwjSGyiLtvFDcQ4l57qvQ1DjhphzPknE0FZz1Hp1AIPJ5TA4Vk30NpU8CSf4dD7dS_ZQ-rXkbtXdXG9nV8__dhi6IeEIsouaL2AasbpirgfS1tRUFFe7_RDYtOHhXDsOs3OWnYTg"/>
+</div>
+<div class="md:w-1/2 flex flex-col justify-between py-2">
+<div>
+<span class="bg-primary/20 text-primary text-xs font-black px-3 py-1 rounded-full border border-primary/30 uppercase tracking-widest">Editor's Choice</span>
+<h3 class="text-4xl font-black mt-4 text-off-white leading-tight">2023 Audi RS5 Performance</h3>
+<p class="text-gray-400 mt-4 leading-relaxed">Save up to $8,400 with our exclusive financing rates for premium members.</p>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="space-y-1">
+<p class="text-gray-500 text-sm line-through">$80,400</p>
+<p class="text-primary text-3xl font-black">$72,000</p>
+</div>
+<button class="bg-primary text-gray-900 size-14 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark rounded-3xl p-8 border border-gray-700 flex flex-col justify-between">
+<div>
+<h4 class="text-2xl font-black mb-4">Limited Time Offer</h4>
+<p class="text-gray-400 text-sm leading-relaxed">Trade in your old vehicle and get $2,000 above market value. Offer expires in 48 hours.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-accent-dark/50 p-4 rounded-xl border border-gray-600 flex items-center gap-4">
+<div class="bg-primary/20 p-2 rounded-lg"><span class="material-symbols-outlined text-primary">timer</span></div>
+<div>
+<p class="text-xs text-gray-400 font-bold uppercase">Ends In</p>
+<p class="text-off-white font-black">47:12:05</p>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary font-black py-4 rounded-xl hover:bg-primary hover:text-gray-900 transition-all uppercase tracking-widest text-sm">Claim Offer</button>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary rounded-[2.5rem] overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] absolute -right-20 -top-20">sell</span>
+</div>
+<div class="relative z-10 px-12 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="md:w-2/3 text-center md:text-left">
+<h3 class="text-gray-900 text-5xl font-black mb-4 tracking-tight">Ready to Upgrade? Sell Instantly.</h3>
+<p class="text-gray-900/70 text-xl max-w-2xl font-medium">Skip the dealership hassle. Get a competitive cash offer for your car in less than 24 hours with our AI-powered valuation engine.</p>
+</div>
+<div class="md:w-1/3 flex flex-col sm:flex-row gap-4 w-full">
+<button class="flex-1 bg-gray-900 text-off-white font-black px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-800 transition-all shadow-xl">
+                    Get Valuation
+                    <span class="material-symbols-outlined">payments</span>
+</button>
+</div>
+</div>
+</section>
+<section>
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-4xl font-black mb-4">Seamless Buying Experience</h2>
+<p class="text-gray-400">We've reimagined the way you buy and sell cars to make it as simple as ordering a coffee.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="text-center space-y-6 group">
+<div class="size-20 bg-accent-dark rounded-3xl mx-auto flex items-center justify-center border border-gray-700 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] group-hover:text-gray-900">search_check</span>
+</div>
+<div>
+<h4 class="text-xl font-black mb-3">1. Browse Listings</h4>
+<p class="text-gray-400 text-sm leading-relaxed px-4">Search from thousands of certified vehicles with 150-point inspection reports available instantly.</p>
+</div>
+</div>
+<div class="text-center space-y-6 group">
+<div class="size-20 bg-accent-dark rounded-3xl mx-auto flex items-center justify-center border border-gray-700 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] group-hover:text-gray-900">credit_score</span>
+</div>
+<div>
+<h4 class="text-xl font-black mb-3">2. Fast Approval</h4>
+<p class="text-gray-400 text-sm leading-relaxed px-4">Get pre-qualified in minutes with our transparent financing partners. No hidden fees, ever.</p>
+</div>
+</div>
+<div class="text-center space-y-6 group">
+<div class="size-20 bg-accent-dark rounded-3xl mx-auto flex items-center justify-center border border-gray-700 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] group-hover:text-gray-900">local_shipping</span>
+</div>
+<div>
+<h4 class="text-xl font-black mb-3">3. Secure Delivery</h4>
+<p class="text-gray-400 text-sm leading-relaxed px-4">We deliver right to your doorstep or you can pick it up at one of our local premium lounges.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-12">
+<h2 class="text-3xl font-black">Trusted by Enthusiasts</h2>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined fill-1">star</span>
+<span>4.9/5 Average Rating</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-dark p-8 rounded-3xl border border-gray-700 relative">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+</div>
+<p class="text-gray-300 text-lg italic leading-relaxed mb-8">"The easiest car buying experience I've ever had. No paperwork hassle and the car looks better than the photos. Highly recommended!"</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-gray-600 overflow-hidden border-2 border-primary">
+<img alt="User" class="w-full h-full object-cover" data-alt="Portrait of a male customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ5shqKR4rkFlnqFG1Nb-syFNi1nianNSzA9lZNdJlVOFTax27UmXcEuyMV86Lp_JhkVkOQ5y52TzMMdRlrgeP_6spzGSe7OsFykhtkr5oaSMAcTspOdPyGKkqy3hb7P3hKAW1vxeeDg7js4l3sCrkv2IkFcEzCDweoyIYuKCjoliJmsXXG3dbZJRLNpWZ6kfhU1Y8vl6y9drT0M1ujiuka_wiA_nNPSGARLlLcH18YAcXlpjc6RGPds8cHZ1UrTXXJRPnddmd1A"/>
+</div>
+<div>
+<p class="text-off-white font-bold">Marcus T.</p>
+<p class="text-xs text-gray-500 font-medium">Bought Tesla Model 3</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark p-8 rounded-3xl border border-gray-700 relative">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+</div>
+<p class="text-gray-300 text-lg italic leading-relaxed mb-8">"I was skeptical about selling online but they gave me a higher offer than my local dealership! The payment was instant."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-gray-600 overflow-hidden border-2 border-primary">
+<img alt="User" class="w-full h-full object-cover" data-alt="Portrait of a female customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwjyd8-6vCshgXyCyL0ZeXBlUNUzwGNNZ_s1211bdkRFFEva7_XdbV6pvgCW2dXGf1j7ou8jl26h20FDP2rgzlZg7WgeCUl6hSCvSA8JseqTCuluoi9FesIq4SgKAeXj_VImRXXcTjiDPynVYQ8F3clYvkI3wFs47f3z619TDDwlq-Ej0NdYCjTq36zAyhmzIwxXlfp5I2CTY8YtCdc19BnPAkJIVTBR4kVKp1uzOwShgec8kF7MtlRihPXXOJjGqIOOYka1TsDw"/>
+</div>
+<div>
+<p class="text-off-white font-bold">Sarah J.</p>
+<p class="text-xs text-gray-500 font-medium">Sold Audi Q7</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark p-8 rounded-3xl border border-gray-700 relative">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">star</span>
+</div>
+<p class="text-gray-300 text-lg italic leading-relaxed mb-8">"Their premium selection is unmatched. Found a rare spec 911 that I couldn't find anywhere else. White-glove service."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-gray-600 overflow-hidden border-2 border-primary">
+<img alt="User" class="w-full h-full object-cover" data-alt="Portrait of a customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc__bXTAJ5q9XHb5GL-8o1NxWSOI-2cXhnxYldms4OEDSBQYIXFFB8rKn-hN4dMiLV9M6_zWVSsW3mCTduy5pgi-Zmsbk8-dAE-R4xpy4Hj8IdCFUXJHj9_mRfXZl6QCfaBMcpXJfpKoLjX1zsTQ3LraqQUyLOLDC9fvILAhYRniIUisNZXjuFXWcKzdcLGCBR6bc4Ko4VgZqs12NPJjaXMJVvI_vYELkZChqaIpOl2DChVVh2WFxo4iB6RgL9lZgz4UAEt7AH6Q"/>
+</div>
+<div>
+<p class="text-off-white font-bold">David R.</p>
+<p class="text-xs text-gray-500 font-medium">Bought Porsche GT3</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-dark border-t border-gray-700 py-20 mt-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+<div class="col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-900 text-[24px]">directions_car</span>
+</div>
+<h2 class="text-off-white text-2xl font-black tracking-tight">CarMarket</h2>
+</div>
+<p class="text-gray-400 max-w-sm leading-relaxed">The world's leading luxury car marketplace. We connect passionate drivers with exceptional vehicles through a seamless digital experience.</p>
+<div class="flex gap-4">
+<button class="size-10 rounded-full bg-accent-dark flex items-center justify-center hover:bg-primary hover:text-gray-900 transition-all"><span class="material-symbols-outlined text-[20px]">public</span></button>
+<button class="size-10 rounded-full bg-accent-dark flex items-center justify-center hover:bg-primary hover:text-gray-900 transition-all"><span class="material-symbols-outlined text-[20px]">share</span></button>
+<button class="size-10 rounded-full bg-accent-dark flex items-center justify-center hover:bg-primary hover:text-gray-900 transition-all"><span class="material-symbols-outlined text-[20px]">chat_bubble</span></button>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="font-black text-off-white uppercase tracking-widest text-sm">Inventory</h5>
+<ul class="space-y-4 text-gray-400 text-sm">
+<li><a class="hover:text-primary" href="#">Electric Cars</a></li>
+<li><a class="hover:text-primary" href="#">SUVs &amp; Trucks</a></li>
+<li><a class="hover:text-primary" href="#">Sedans</a></li>
+<li><a class="hover:text-primary" href="#">Classic Cars</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-black text-off-white uppercase tracking-widest text-sm">Company</h5>
+<ul class="space-y-4 text-gray-400 text-sm">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Our Process</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+<li><a class="hover:text-primary" href="#">Reviews</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-black text-off-white uppercase tracking-widest text-sm">Support</h5>
+<ul class="space-y-4 text-gray-400 text-sm">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Use</a></li>
+<li><a class="hover:text-primary" href="#">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-xs">© 2024 CarMarket Premium. All rights reserved.</p>
+<div class="flex gap-8 text-xs text-gray-500">
+<span>Designed for the modern road</span>
+</div>
+</div>
+</footer>
+
+</body></html>
