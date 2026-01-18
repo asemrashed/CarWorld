@@ -1,22 +1,6 @@
-export const cars = [
+[
   {
     "id": 1,
-    "name": "Tesla Model S Plaid",
-    "year": 2025,
-    "model": "Plaid",
-    "category": "Sedan",
-    "price": 89990,
-    "currency": "USD",
-    "fuel_type": "Electric",
-    "transmission": "Automatic",
-    "mileage": 0,
-    "exterior_color": "Solid Black",
-    "interior_color": "White/Black Carbon Fiber",
-    "image_url": "https://images.unsplash.com/photo-1617788138017-80ad42243c5d?auto=format&fit=crop&q=80&w=1000",
-    "features": ["Autopilot", "Ludicrous Mode", "17-inch Cinematic Display"]
-  },
-  {
-    "id": 2,
     "name": "Ford F-150 Raptor R",
     "year": 2026,
     "model": "Raptor R",
@@ -32,7 +16,7 @@ export const cars = [
     "features": ["Fox Live Valve Shocks", "37-inch Tires", "720 HP V8"]
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Porsche 911 Carrera",
     "year": 2025,
     "model": "911 Carrera",
@@ -48,7 +32,7 @@ export const cars = [
     "features": ["Sport Chrono Package", "PASM Suspension", "Bose Surround Sound"]
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "BMW X5 xDrive40i",
     "year": 2026,
     "model": "xDrive40i",
@@ -64,23 +48,7 @@ export const cars = [
     "features": ["Panoramic Sky Lounge", "Live Cockpit Professional", "Parking Assistant Plus"]
   },
   {
-    "id": 5,
-    "name": "Toyota RAV4 Hybrid",
-    "year": 2025,
-    "model": "XSE",
-    "category": "SUV",
-    "price": 38500,
-    "currency": "USD",
-    "fuel_type": "Hybrid",
-    "transmission": "ECVT",
-    "mileage": 0,
-    "exterior_color": "Wind Chill Pearl",
-    "interior_color": "Black SofTex",
-    "image_url": "https://images.unsplash.com/photo-1566473065146-d206f924680a?auto=format&fit=crop&q=80&w=1000",
-    "features": ["AWD", "JBL Premium Audio", "Heated Steering Wheel"]
-  },
-  {
-    "id": 6,
+    "id": 4,
     "name": "Lexus LS 500",
     "year": 2026,
     "model": "Heritage Edition",
@@ -96,7 +64,7 @@ export const cars = [
     "features": ["Lexus Safety System+ 3.0", "Massaging Seats", "24-inch Head-Up Display"]
   },
   {
-    "id": 7,
+    "id": 5,
     "name": "Audi RS e-tron GT",
     "year": 2025,
     "model": "RS",
@@ -112,7 +80,7 @@ export const cars = [
     "features": ["Carbon Fiber Roof", "Tungsten Carbide Brakes", "Matrix LED Headlights"]
   },
   {
-    "id": 8,
+    "id": 6,
     "name": "Jeep Wrangler Rubicon",
     "year": 2025,
     "model": "392 Final Edition",
@@ -128,23 +96,7 @@ export const cars = [
     "features": ["Warn Winch", "6.4L HEMI V8", "Electronic Sway Bar Disconnect"]
   },
   {
-    "id": 9,
-    "name": "Land Rover Range Rover",
-    "year": 2026,
-    "model": "Autobiography",
-    "category": "SUV",
-    "price": 141100,
-    "currency": "USD",
-    "fuel_type": "PHEV",
-    "transmission": "Automatic",
-    "mileage": 0,
-    "exterior_color": "Batumi Gold",
-    "interior_color": "Ebony Aniline Leather",
-    "image_url": "https://images.unsplash.com/photo-1563720223185-11003d516905?auto=format&fit=crop&q=80&w=1000",
-    "features": ["All-Wheel Steering", "Executive Class Rear Seating", "3D Surround Camera"]
-  },
-  {
-    "id": 10,
+    "id": 7,
     "name": "Honda Civic Type R",
     "year": 2025,
     "model": "Limited",
@@ -160,7 +112,7 @@ export const cars = [
     "features": ["Log-R Datalogger", "Brembo Brakes", "Adaptive Dampers"]
   },
   {
-    "id": 11,
+    "id": 8,
     "name": "Mercedes-Benz G 63",
     "year": 2026,
     "model": "AMG",
@@ -176,7 +128,7 @@ export const cars = [
     "features": ["Burmester Surround Sound", "Triple Lock Differentials", "Nappa Leather"]
   },
   {
-    "id": 12,
+    "id": 9,
     "name": "Chevrolet Corvette Z06",
     "year": 2025,
     "model": "Z06 3LZ",
@@ -192,23 +144,7 @@ export const cars = [
     "features": ["Z07 Performance Package", "Carbon Fiber Wheels", "Flat-Plane Crank V8"]
   },
   {
-    "id": 13,
-    "name": "Hyundai Ioniq 5 N",
-    "year": 2025,
-    "model": "N-Performance",
-    "category": "Hatchback",
-    "price": 66100,
-    "currency": "USD",
-    "fuel_type": "Electric",
-    "transmission": "Single Speed",
-    "mileage": 0,
-    "exterior_color": "Performance Blue Matte",
-    "interior_color": "Black Alcantara",
-    "image_url": "https://images.unsplash.com/photo-1671536761596-f9f38f15be3c?auto=format&fit=crop&q=80&w=1000",
-    "features": ["N Drift Optimizer", "Simulated Gearshifts", "641 HP Boost Mode"]
-  },
-  {
-    "id": 14,
+    "id": 10,
     "name": "Cadillac Escalade-V",
     "year": 2026,
     "model": "V-Series",
@@ -224,7 +160,7 @@ export const cars = [
     "features": ["Super Cruise", "AKG Studio Reference 36-Speaker", "Night Vision"]
   },
   {
-    "id": 15,
+    "id": 11,
     "name": "Rivian R1T",
     "year": 2025,
     "model": "Ascend Quad-Motor",
@@ -240,7 +176,7 @@ export const cars = [
     "features": ["Gear Tunnel", "0-60 in 2.5s", "Adjustable Air Suspension"]
   },
   {
-    "id": 16,
+    "id": 12,
     "name": "Mazda CX-90",
     "year": 2025,
     "model": "Turbo S Premium Plus",
@@ -256,39 +192,7 @@ export const cars = [
     "features": ["Inline-6 Engine", "3rd Row Seating", "360 View Monitor"]
   },
   {
-    "id": 17,
-    "name": "Lucid Air Sapphire",
-    "year": 2026,
-    "model": "Sapphire",
-    "category": "Sedan",
-    "price": 249000,
-    "currency": "USD",
-    "fuel_type": "Electric",
-    "transmission": "Single Speed",
-    "mileage": 0,
-    "exterior_color": "Sapphire Blue",
-    "interior_color": "Sapphire Mojave",
-    "image_url": "https://images.unsplash.com/photo-1662581023758-a902b801552f?auto=format&fit=crop&q=80&w=1000",
-    "features": ["1,234 HP", "Carbon Ceramic Brakes", "Glass Canopy Roof"]
-  },
-  {
-    "id": 18,
-    "name": "GMC Hummer EV SUV",
-    "year": 2025,
-    "model": "Edition 1",
-    "category": "SUV",
-    "price": 104000,
-    "currency": "USD",
-    "fuel_type": "Electric",
-    "transmission": "Automatic",
-    "mileage": 50,
-    "exterior_color": "Moonshot Green Matte",
-    "interior_color": "Lunar Shadow",
-    "image_url": "https://images.unsplash.com/photo-1612462102141-8631481f3333?auto=format&fit=crop&q=80&w=1000",
-    "features": ["CrabWalk Mode", "Extract Mode", "Infinity Roof"]
-  },
-  {
-    "id": 19,
+    "id": 13,
     "name": "Ford Mustang Dark Horse",
     "year": 2025,
     "model": "Premium",
@@ -302,21 +206,5 @@ export const cars = [
     "interior_color": "Black with Blue Accents",
     "image_url": "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&q=80&w=1000",
     "features": ["MagneRide Damping", "Active Valve Exhaust", "Recaro Seats"]
-  },
-  {
-    "id": 20,
-    "name": "Toyota Land Cruiser",
-    "year": 2026,
-    "model": "First Edition",
-    "category": "SUV",
-    "price": 74950,
-    "currency": "USD",
-    "fuel_type": "Hybrid",
-    "transmission": "8-Speed Automatic",
-    "mileage": 0,
-    "exterior_color": "Heritage Blue / Grayscape",
-    "interior_color": "Black Leather",
-    "image_url": "https://images.unsplash.com/photo-1542362567-b05503f3af15?auto=format&fit=crop&q=80&w=1000",
-    "features": ["Round LED Headlights", "Multi-Terrain Select", "Front Stabilizer Disconnect"]
   }
-];
+]
