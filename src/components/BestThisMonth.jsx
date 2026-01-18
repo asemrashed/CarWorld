@@ -57,8 +57,8 @@ export default function BestThisMonth() {
         </div>
         <div className="relative z-10 px-12 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-2/3 text-center md:text-left">
-            <h3 className="text-secondary text-5xl font-black mb-4 tracking-tight">Ready to Upgrade? Sell Instantly.</h3>
-            <p className="text-secondary text-xl max-w-2xl font-medium">Skip the dealership hassle. Get a competitive cash offer for your car in less than 24 hours with our AI-powered valuation engine.</p>
+            <h3 className="text-black text-5xl font-black mb-4 tracking-tight">Ready to Upgrade? Sell Instantly.</h3>
+            <p className="text-black/70 text-xl max-w-2xl font-medium">Skip the dealership hassle. Get a competitive cash offer for your car in less than 24 hours with our AI-powered valuation engine.</p>
           </div>
           <div className="md:w-1/3 flex flex-col sm:flex-row gap-4 w-full">
             <button className="flex-1 bg-gray-900 text-white font-black px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-800 transition-all shadow-xl">
