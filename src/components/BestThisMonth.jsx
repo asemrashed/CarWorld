@@ -25,7 +25,7 @@ export default function BestThisMonth() {
                   <p className="text-gray-500 text-sm line-through">$80,400</p>
                   <p className="text-primary text-3xl font-black">$72,000</p>
                 </div>
-                <button className="bg-primary text-primary-content size-14 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 transition-all">
+                <button className="bg-primary cursor-pointer text-primary-content size-14 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 transition-all">
                   <MdArrowForward size={24} />
                 </button>
               </div>
@@ -46,7 +46,7 @@ export default function BestThisMonth() {
                 <p className="text-primary">47:12:05</p>
               </div>
             </div>
-            <button className="w-full border-2 border-primary text-primary font-black py-4 rounded-xl hover:bg-primary hover:text-primary-content transition-all uppercase tracking-widest text-sm">Claim Offer</button>
+            <button className="w-full border-2 border-primary cursor-pointer text-primary font-black py-4 rounded-xl hover:bg-primary hover:text-primary-content transition-all uppercase tracking-widest text-sm">Claim Offer</button>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function BestThisMonth() {
             <p className="text-black/70 text-xl max-w-2xl font-medium">Skip the dealership hassle. Get a competitive cash offer for your car in less than 24 hours with our AI-powered valuation engine.</p>
           </div>
           <div className="md:w-1/3 flex flex-col sm:flex-row gap-4 w-full">
-            <button className="flex-1 bg-gray-900 text-white font-black px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-800 transition-all shadow-xl">
+            <button className="flex-1 bg-gray-900 text-white cursor-pointer font-black px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-800 transition-all shadow-xl">
                Get Valuation
                <MdPayments size={24} />
             </button>

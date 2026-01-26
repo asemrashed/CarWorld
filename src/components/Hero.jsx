@@ -6,8 +6,8 @@ export default function Hero() {
       <div className="space-y-8">
         <div className="space-y-4">
           <span className="bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Premium Marketplace</span>
-          <h1 className="text-6xl font-black leading-[1.1] tracking-tight">Find Your Next <br/><span className="text-primary">Masterpiece</span></h1>
-          <p className="text-gray-500 text-lg max-w-lg leading-relaxed">Experience the ultimate luxury of choice with our curated selection of high-performance vehicles and electric innovations.</p>
+          <h1 className="text-4xl mt-4 md:text-6xl font-black leading-[1.1] tracking-tight">Find Your Next <br/><span className="text-primary">Masterpiece</span></h1>
+          <p className="text-gray-500 text-sm md:text-lg max-w-lg leading-relaxed">Experience the ultimate luxury of choice with our curated selection of high-performance vehicles and electric innovations.</p>
         </div>
         
         <div className="bg-base-200 p-6 rounded-2xl shadow-xl border border-base-300 max-w-xl">
@@ -41,7 +41,7 @@ export default function Hero() {
               </select>
             </div>
           </div>
-          <button className="w-full bg-primary text-primary-content font-black py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+          <button className="w-full bg-primary text-sm md:text-base cursor-pointer text-primary-content font-black py-2 md:py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
             <MdSearch size={20} />
             SEARCH INVENTORY
           </button>

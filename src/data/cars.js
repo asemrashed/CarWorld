@@ -1,4 +1,4 @@
-[
+export const cars = [
   {
     "id": 1,
     "name": "Ford F-150 Raptor R",

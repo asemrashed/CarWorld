@@ -46,7 +46,7 @@ export default function CarCard({ car }) {
           </div>
           <div className="flex items-center justify-between">
             <p className="text-primary text-xl font-black">${car.price?.toLocaleString()}</p>
-            <button className="text-xs font-bold bg-base-300 px-4 py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-content transition-colors">DETAILS</button>
+            <button className="text-xs font-bold bg-base-300 px-4 py-2 rounded-lg group-hover:bg-primary cursor-pointer group-hover:text-primary-content transition-colors">DETAILS</button>
           </div>
         </div>
       </div>

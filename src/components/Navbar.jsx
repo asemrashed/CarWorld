@@ -76,7 +76,7 @@ export default function Navbar() {
           
           {isAuthenticated ? (
             <div className="dropdown dropdown-end">
-               <button className="hidden sm:flex items-center justify-center size-10 rounded-full bg-base-200 hover:bg-base-300 transition-colors">
+               <button className="hidden sm:flex cursor-pointer items-center justify-center size-10 rounded-full bg-base-200 hover:bg-base-300 transition-colors">
                  <MdPerson size={20} />
                </button>
                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-52 mt-4">
@@ -85,13 +85,16 @@ export default function Navbar() {
                </ul>
             </div>
           ) : (
-            <Link href="/login" className="btn btn-sm btn-primary rounded-full px-6">Sign In</Link>
+            <div className="hidden lg:flex items-center gap-2">
+            <Link href="/login" className="btn btn-sm btn-primary cursor-pointer rounded-full px-6">Sign In</Link>
+            <Link href="/register" className="btn btn-sm btn-outline btn-primary hover:btn-primary cursor-pointer rounded-full px-6">Sign Up</Link>
+            </div>
           )}
 
           {mounted && (
             <button 
               onClick={() => setTheme(isDark ? 'light' : 'dark')}
-              className="flex items-center justify-center size-10 rounded-full bg-base-200 hover:bg-base-300 transition-colors text-primary"
+              className="flex items-center justify-center size-10 cursor-pointer rounded-full bg-base-200 hover:bg-base-300 transition-colors text-primary"
             >
               {isDark ? <MdLightMode size={20} /> : <MdDarkMode size={20} />}
             </button>
@@ -121,6 +124,10 @@ export default function Navbar() {
               placeholder="Quick search..." 
               type="text"
             />
+          </div>
+          <div className="flex items-center gap-2">
+            <Link href="/login" className="btn btn-sm btn-primary cursor-pointer rounded-full px-6">Sign In</Link>
+            <Link href="/register" className="btn btn-sm btn-outline btn-primary hover:btn-primary cursor-pointer rounded-full px-6">Sign Up</Link>
           </div>
         </div>
       )}
